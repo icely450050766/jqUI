@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title> 进度条 </title>
+    <link href="progressBar.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<!--http://www.runoob.com/jqueryui/example-slider.html-->
+
+    <div id="progressBarId" style="width: 50%;"></div>
+
+    <script src="//apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="progressBar.js"></script>
+
+    <script>
+
+        var $progressBar= $('#progressBarId');
+
+        // 初始化
+        $progressBar.progressBar({
+            currentProgress: 11, // 当前进度
+            completeText: '完成！', // 100%时 显示的内容
+        });
+
+        // 定时器 设置 进度条进度
+        var temp = setInterval( function(){
+            var _value = parseInt( $progressBar.attr('currentProgress') ); // 获取当前进度
+            if( _value < 100 ) $progressBar.progressBar({ currentProgress: _value + 1 }); // 设置 当前进度+1
+            else clearInterval( temp );
+        }, 30);
+
+    </script>
+
+</body>
+</html>
