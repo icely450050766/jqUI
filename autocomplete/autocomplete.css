@@ -1,0 +1,12 @@
+.autoComplete + .autoCompleteBox{
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 3px;
+}
+.autoComplete + .autoCompleteBox > .option{
+    padding: 2px 5px;
+    cursor: pointer;
+}
+.autoComplete + .autoCompleteBox > .option.hoverClass{
+    background: rgb(18,149,239);
+    color: #ffffff;
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title> 输入自动完成 </title>
+    <link rel="stylesheet" type="text/css" href="autoComplete.css">
+</head>
+<body>
+
+    <input type="text" class="autoComplete" id="autoCompleteInput">
+
+    <script src="//apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="autoComplete.js"></script>
+
+    <script>
+        autoComplete.init( $('#autoCompleteInput'), 'data.json', {} );
+    </script>
+</body>
+</html>
